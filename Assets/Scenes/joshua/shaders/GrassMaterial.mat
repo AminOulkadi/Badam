@@ -45,7 +45,7 @@ Material:
     - _BUILTIN_QueueControl: 0
     - _BUILTIN_QueueOffset: 0
     - _Metallic: 0
-    - _Smoothness: 0.5
+    - _Smoothness: 0.16
     m_Colors:
     - _AlbedoColor: {r: 0.24975711, g: 0.7509433, b: 0.17427546, a: 0}
     - _Offset: {r: 0, g: 0, b: 0, a: 0}
