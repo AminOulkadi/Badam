@@ -22,6 +22,29 @@ public class timer : MonoBehaviour
         }
         int minutes = Mathf.FloorToInt(remainingTime / 60);
         int seconds = Mathf.FloorToInt(remainingTime % 60);
-        timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds); 
+        timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+        {
+            if (Input.anyKeyDown || Input.mousePosition != prevMousePosition)
+                RestartGameInvoke();
+
+            prevMousePosition = Input.mousePosition;
+        }
     }
+    void Start()
+    {
+        RestartGameInvoke();
+    }
+
+    void RestartGameInvoke()
+    {
+        CancelInvoke();
+        Invoke("RestartGame", 10);
+    }
+    void RestartGame()
+    {
+        //
+    }
+    private Vector3 prevMousePosition = Vector3.zero;
+
+  
 }
